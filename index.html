@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elyorbek Olimov — Python Backend Developer</title>
+    <meta name="description" content="Elyorbek Olimov — Python Backend Developer portfolio sayti">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo"><span class="logo-tag">&lt;</span>Elyorbek Olimov<span class="logo-tag">/&gt;</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" data-uz="O'zim haqimda" data-en="About">O'zim haqimda</a></li>
+                <li><a href="#skills" data-uz="Ko'nikmalar" data-en="Skills">Ko'nikmalar</a></li>
+                <li><a href="#projects" data-uz="Loyihalar" data-en="Projects">Loyihalar</a></li>
+                <li><a href="#experience" data-uz="Tajriba" data-en="Experience">Tajriba</a></li>
+                <li><a href="#contact" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">☀️</button>
+                <button class="lang-toggle" id="langToggle" onclick="toggleLang()">EN</button>
+                <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-lines"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting animate-in" data-uz="Assalomu alaykum! Men" data-en="Hello! I'm">Assalomu alaykum! Men</p>
+                    <h1 class="hero-name animate-in">Elyorbek <span class="neon-text">Olimov</span></h1>
+                    <p class="hero-title animate-in" data-uz="Python Backend Developer" data-en="Python Backend Developer">Python Backend Developer</p>
+                    <p class="hero-desc animate-in" data-uz="Kengaytiriladigan va yuqori samaradorlikka ega backend tizimlar yaratishga ixtisoslashgan Python dasturchi" data-en="Python developer specialized in building scalable and high-performance backend systems">Kengaytiriladigan va yuqori samaradorlikka ega backend tizimlar yaratishga ixtisoslashgan Python dasturchi</p>
+                    <div class="hero-buttons animate-in">
+                        <a href="#projects" class="btn btn-primary" data-uz="Loyihalarimni ko'rish" data-en="View Projects">Loyihalarimni ko'rish</a>
+                        <a href="#contact" class="btn btn-outline" data-uz="Bog'lanish" data-en="Contact Me">Bog'lanish</a>
+                    </div>
+                </div>
+                <div class="hero-avatar animate-in">
+                    <div class="avatar-ring">
+                        <div class="avatar-illustration">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="ebg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1A2332"/><stop offset="100%" stop-color="#2C3E50"/></linearGradient>
+                                    <linearGradient id="ehoodie" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0096FF"/><stop offset="100%" stop-color="#0070CC"/></linearGradient>
+                                    <linearGradient id="ehoodie2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#007ACC"/><stop offset="100%" stop-color="#005FA3"/></linearGradient>
+                                    <linearGradient id="eskin" x1=".5" y1="0" x2=".5" y2="1"><stop offset="0%" stop-color="#F5D5A8"/><stop offset="100%" stop-color="#E8BA80"/></linearGradient>
+                                    <linearGradient id="elaptop" x1=".5" y1="0" x2=".5" y2="1"><stop offset="0%" stop-color="#E8EDF2"/><stop offset="100%" stop-color="#CBD5E1"/></linearGradient>
+                                    <filter id="eglow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                                </defs>
+                                <!-- Background -->
+                                <circle cx="100" cy="100" r="100" fill="url(#ebg)"/>
+                                <!-- Subtle glow behind figure -->
+                                <ellipse cx="100" cy="120" rx="60" ry="50" fill="#0096FF" opacity="0.04"/>
+                                <!-- Hoodie body -->
+                                <path d="M38 200 C38 162 55 148 72 142 L72 200Z" fill="url(#ehoodie)"/>
+                                <path d="M162 200 C162 162 145 148 128 142 L128 200Z" fill="url(#ehoodie)"/>
+                                <path d="M72 142 C80 138 90 136 100 136 C110 136 120 138 128 142 L128 200 L72 200Z" fill="url(#ehoodie)"/>
+                                <!-- Hoodie front center line -->
+                                <line x1="100" y1="142" x2="100" y2="200" stroke="#005FA3" stroke-width="1.5" opacity="0.4"/>
+                                <!-- Hoodie strings -->
+                                <line x1="94" y1="142" x2="92" y2="164" stroke="#E8EDF2" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+                                <line x1="106" y1="142" x2="108" y2="164" stroke="#E8EDF2" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+                                <circle cx="92" cy="165" r="1.5" fill="#E8EDF2" opacity="0.7"/>
+                                <circle cx="108" cy="165" r="1.5" fill="#E8EDF2" opacity="0.7"/>
+                                <!-- Hoodie pocket -->
+                                <path d="M78 172 Q100 178 122 172" stroke="#005FA3" stroke-width="1.2" fill="none" opacity="0.3"/>
+                                <!-- Arms holding laptop -->
+                                <path d="M72 148 C62 156 58 168 60 180 L80 176" fill="url(#ehoodie)" stroke="none"/>
+                                <path d="M128 148 C138 156 142 168 140 180 L120 176" fill="url(#ehoodie)" stroke="none"/>
+                                <!-- Hands -->
+                                <ellipse cx="78" cy="176" rx="6" ry="4" fill="url(#eskin)"/>
+                                <ellipse cx="122" cy="176" rx="6" ry="4" fill="url(#eskin)"/>
+                                <!-- Laptop base -->
+                                <rect x="68" y="172" width="64" height="6" rx="2" fill="url(#elaptop)"/>
+                                <ellipse cx="100" cy="175" rx="6" ry="2" fill="#B0BEC5" opacity="0.5"/>
+                                <!-- Laptop screen -->
+                                <path d="M72 172 L76 140 L124 140 L128 172Z" fill="#0D1117"/>
+                                <path d="M78 144 L80 168 L120 168 L122 144Z" fill="#111827"/>
+                                <!-- Code lines on screen -->
+                                <line x1="84" y1="150" x2="104" y2="150" stroke="#00FF88" stroke-width="1.8" opacity="0.9"/>
+                                <line x1="84" y1="154" x2="96" y2="154" stroke="#0096FF" stroke-width="1.8" opacity="0.7"/>
+                                <line x1="84" y1="158" x2="112" y2="158" stroke="#0096FF" stroke-width="1.8" opacity="0.5"/>
+                                <line x1="84" y1="162" x2="100" y2="162" stroke="#00FF88" stroke-width="1.8" opacity="0.4"/>
+                                <!-- Screen glow on face -->
+                                <ellipse cx="100" cy="150" rx="30" ry="20" fill="#0096FF" opacity="0.05"/>
+                                <!-- Neck -->
+                                <rect x="93" y="124" width="14" height="14" rx="5" fill="url(#eskin)"/>
+                                <!-- Hood -->
+                                <path d="M62 115 C62 72 78 55 100 52 C122 55 138 72 138 115 C134 120 126 130 118 134 L118 142 C112 138 106 136 100 136 C94 136 88 138 82 142 L82 134 C74 130 66 120 62 115Z" fill="url(#ehoodie)"/>
+                                <!-- Hood shadow/depth -->
+                                <path d="M68 110 C68 76 82 60 100 58 C118 60 132 76 132 110" fill="url(#ehoodie2)"/>
+                                <!-- Hood inner shadow -->
+                                <path d="M72 108 C72 80 84 66 100 64 C116 66 128 80 128 108" fill="#1A2332"/>
+                                <!-- Hair peeking from hood -->
+                                <path d="M78 100 C80 86 88 76 100 74 C104 74 108 76 112 80 L108 96 L102 88 L96 98 L90 88 L84 100Z" fill="#1C2430"/>
+                                <path d="M80 98 C82 88 90 78 100 76 L96 92Z" fill="#243040" opacity="0.7"/>
+                                <path d="M120 98 C118 88 110 78 100 76 L104 92Z" fill="#243040" opacity="0.7"/>
+                                <!-- Face -->
+                                <ellipse cx="100" cy="100" rx="25" ry="22" fill="url(#eskin)"/>
+                                <!-- Eyes - not visible (flat style like reference) -->
+                                <!-- Laptop screen glow effect -->
+                                <ellipse cx="100" cy="156" rx="28" ry="8" fill="#0096FF" opacity="0.08" filter="url(#eglow)"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="avatar-glow"></div>
+                </div>
+            </div>
+            <div class="hero-stats animate-in">
+                <div class="stat-item">
+                    <span class="stat-number">4+</span>
+                    <span class="stat-label" data-uz="Loyihalar" data-en="Projects">Loyihalar</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1+</span>
+                    <span class="stat-label" data-uz="Yil tajriba" data-en="Year Experience">Yil tajriba</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label" data-uz="Sertifikat" data-en="Certificate">Sertifikat</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-uz="O'zim haqimda" data-en="About Me"><span class="neon-text">&lt;</span>O'zim haqimda<span class="neon-text">/&gt;</span></h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-uz="Kengaytiriladigan va yuqori samaradorlikka ega backend tizimlar yaratishga ixtisoslashgan Python dasturchiman. Django va Django REST Framework yordamida RESTful API ishlab chiqish, ma'lumotlar bazasi dizaynini optimallashtirish hamda autentifikatsiya va ruxsat boshqaruvi tizimlarini yaratish bo'yicha amaliy tajribaga egaman." data-en="I am a Python developer specialized in building scalable and high-performance backend systems. I have practical experience in developing RESTful APIs using Django and Django REST Framework, optimizing database design, and building authentication and authorization systems.">Kengaytiriladigan va yuqori samaradorlikka ega backend tizimlar yaratishga ixtisoslashgan Python dasturchiman. Django va Django REST Framework yordamida RESTful API ishlab chiqish, ma'lumotlar bazasi dizaynini optimallashtirish hamda autentifikatsiya va ruxsat boshqaruvi tizimlarini yaratish bo'yicha amaliy tajribaga egaman.</p>
+                    <p data-uz="Meta Back-End Developer Professional Certificate egasi sifatida backend engineering va API dizayn tamoyillarini chuqur o'rganganman." data-en="As a Meta Back-End Developer Professional Certificate holder, I have deeply studied backend engineering and API design principles.">Meta Back-End Developer Professional Certificate egasi sifatida backend engineering va API dizayn tamoyillarini chuqur o'rganganman.</p>
+                    <p data-uz="'Muhammad al-Xorazmiy vorislari' loyihasining IT kurslarida tahsil olib, nazariy va amaliy bilimlarni real loyihalar bilan mustahkamlab kelmoqdaman." data-en="I am studying at the IT courses of the 'Heirs of Muhammad al-Khwarizmi' project, reinforcing theoretical and practical knowledge with real projects.">"Muhammad al-Xorazmiy vorislari" loyihasining IT kurslarida tahsil olib, nazariy va amaliy bilimlarni real loyihalar bilan mustahkamlab kelmoqdaman.</p>
+                </div>
+                <div class="about-info">
+                    <div class="info-item">
+                        <span class="info-label" data-uz="Manzil" data-en="Location">Manzil</span>
+                        <span class="info-value" data-uz="Tuproqqal'a, Xorazm" data-en="Tuproqqal'a, Khorezm">Tuproqqal'a, Xorazm</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label" data-uz="Ta'lim" data-en="Education">Ta'lim</span>
+                        <span class="info-value" data-uz="11-sinf o'quvchisi" data-en="11th grade student">11-sinf o'quvchisi</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label" data-uz="Tillar" data-en="Languages">Tillar</span>
+                        <span class="info-value" data-uz="O'zbek, Ingliz (A2), Rus" data-en="Uzbek, English (A2), Russian">O'zbek, Ingliz (A2), Rus</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <h2 class="section-title" data-uz="Ko'nikmalar" data-en="Skills"><span class="neon-text">&lt;</span>Ko'nikmalar<span class="neon-text">/&gt;</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">&#x1F40D;</div>
+                    <h3>Python</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#9881;</div>
+                    <h3>Django / DRF</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#128451;</div>
+                    <h3>PostgreSQL / MySQL</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#128268;</div>
+                    <h3>REST API</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#128274;</div>
+                    <h3>JWT Authentication</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#128295;</div>
+                    <h3>API Testing (Postman)</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#128193;</div>
+                    <h3>Git / GitHub</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#128427;</div>
+                    <h3>Linux</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#9889;</div>
+                    <h3>Redis (Caching)</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">&#128640;</div>
+                    <h3>Backend Optimization</h3>
+                    <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title" data-uz="Loyihalar" data-en="Projects"><span class="neon-text">&lt;</span>Loyihalar<span class="neon-text">/&gt;</span></h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">&#128640;</span>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">High-Load API Simulation</h3>
+                    <p class="project-desc" data-uz="Yuqori yuklama ostida API modeli — stress test va performance monitoring" data-en="API model under high load — stress testing and performance monitoring">Yuqori yuklama ostida API modeli — stress test va performance monitoring</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">&#128179;</span>
+                        <div class="project-tags">
+                            <span class="tag">Django REST</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Online Payment Backend</h3>
+                    <p class="project-desc" data-uz="To'lov va tranzaksiyalar boshqaruvi — xavfsiz moliyaviy operatsiyalar backend tizimi" data-en="Payment and transaction management — secure financial operations backend system">To'lov va tranzaksiyalar boshqaruvi — xavfsiz moliyaviy operatsiyalar backend tizimi</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">&#127891;</span>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Role-Based Education API</h3>
+                    <p class="project-desc" data-uz="Rolga asoslangan ta'lim platformasi — RBAC bilan foydalanuvchi boshqaruvi" data-en="Role-based education platform — user management with RBAC">Rolga asoslangan ta'lim platformasi — RBAC bilan foydalanuvchi boshqaruvi</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">&#128269;</span>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Data Filtering & Search API</h3>
+                    <p class="project-desc" data-uz="Murakkab filter va qidiruv tizimi — ko'p parametrli qidiruv va filtrlash" data-en="Advanced filtering and search system — multi-parameter search and filtering">Murakkab filter va qidiruv tizimi — ko'p parametrli qidiruv va filtrlash</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <h2 class="section-title" data-uz="Tajriba va Ta'lim" data-en="Experience & Education"><span class="neon-text">&lt;</span>Tajriba va Ta'lim<span class="neon-text">/&gt;</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 — <span data-uz="Hozir" data-en="Present">Hozir</span></span>
+                        <h3 data-uz="Python Backend Developer" data-en="Python Backend Developer">Python Backend Developer</h3>
+                        <p class="timeline-place" data-uz="Mustaqil loyihalar" data-en="Independent Projects">Mustaqil loyihalar</p>
+                        <p data-uz="Django asosida REST API arxitekturasi, PostgreSQL relational struktura loyihalash, token autentifikatsiya, API endpointlarni test va optimallashtirish" data-en="REST API architecture with Django, PostgreSQL relational structure design, token authentication, API endpoint testing and optimization">Django asosida REST API arxitekturasi, PostgreSQL relational struktura loyihalash, token autentifikatsiya, API endpointlarni test va optimallashtirish</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 — <span data-uz="Hozir" data-en="Present">Hozir</span></span>
+                        <h3 data-uz="Backend Developer" data-en="Backend Developer">Backend Developer</h3>
+                        <p class="timeline-place">Muhammad Al-Xorazmiy Vorislari</p>
+                        <p data-uz="Backend arxitektura, Scalable REST API ishlab chiqish, performance optimization va real loyiha asosidagi intensiv amaliy mashg'ulotlar" data-en="Backend architecture, Scalable REST API development, performance optimization and intensive practical sessions based on real projects">Backend arxitektura, Scalable REST API ishlab chiqish, performance optimization va real loyiha asosidagi intensiv amaliy mashg'ulotlar</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 — <span data-uz="Hozir" data-en="Present">Hozir</span></span>
+                        <h3 data-uz="Muhammad Al-Xorazmiy Vorislari" data-en="Heirs of Muhammad Al-Khwarizmi">Muhammad Al-Xorazmiy Vorislari</h3>
+                        <p data-uz="Python, Django, Backend Dev, PostgreSQL — Real loyiha asosida backend arxitektura va REST API ishlab chiqish" data-en="Python, Django, Backend Dev, PostgreSQL — Backend architecture and REST API development based on real projects">Python, Django, Backend Dev, PostgreSQL — Real loyiha asosida backend arxitektura va REST API ishlab chiqish</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates -->
+    <section class="section certificates" id="certificates">
+        <div class="container">
+            <h2 class="section-title" data-uz="Sertifikatlar" data-en="Certificates"><span class="neon-text">&lt;</span>Sertifikatlar<span class="neon-text">/&gt;</span></h2>
+            <div class="cert-grid">
+                <a href="https://www.coursera.org/account/accomplishments/professional-cert/VXGXRW0XFLNH" target="_blank" rel="noopener noreferrer" class="cert-link">
+                    <div class="cert-card">
+                        <div class="cert-icon">&#127942;</div>
+                        <h3>Meta Back-End Developer</h3>
+                        <p>Professional Certificate — Coursera</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" data-uz="Bog'lanish" data-en="Contact"><span class="neon-text">&lt;</span>Bog'lanish<span class="neon-text">/&gt;</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">&#128222;</span>
+                        <div>
+                            <p class="contact-label" data-uz="Telefon" data-en="Phone">Telefon</p>
+                            <a href="tel:+998976020282">+998 97 602 02 82</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">&#9993;</span>
+                        <div>
+                            <p class="contact-label">Email</p>
+                            <a href="mailto:elyorbek.axv@gmail.com">elyorbek.axv@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">&#128205;</span>
+                        <div>
+                            <p class="contact-label" data-uz="Manzil" data-en="Location">Manzil</p>
+                            <p data-uz="Tuproqqal'a tumani, Xorazm viloyati" data-en="Tuproqqal'a district, Khorezm region">Tuproqqal'a tumani, Xorazm viloyati</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+                        <div>
+                            <p class="contact-label" data-uz="GitHub" data-en="GitHub">GitHub</p>
+                            <a href="#">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleSubmit(event)">
+                    <input type="text" placeholder="Ism" data-uz-placeholder="Ismingiz" data-en-placeholder="Your Name" required>
+                    <input type="email" placeholder="Email" data-uz-placeholder="Email manzilingiz" data-en-placeholder="Your Email" required>
+                    <textarea rows="5" placeholder="Xabar" data-uz-placeholder="Xabaringiz..." data-en-placeholder="Your Message..." required></textarea>
+                    <button type="submit" class="btn btn-primary" data-uz="Yuborish" data-en="Send Message">Yuborish</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&lt;Elyorbek Olimov/&gt; &copy; 2026. <span data-uz="Barcha huquqlar himoyalangan" data-en="All rights reserved">Barcha huquqlar himoyalangan</span>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
